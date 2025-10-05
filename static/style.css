@@ -1,86 +1,62 @@
-/* General body styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 50px;
-    background-color: #f4f4f4;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     text-align: center;
 }
 
-/* Form container */
-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
-    display: inline-block;
+h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
     text-align: left;
 }
 
-/* Headings */
-h2 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Labels */
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* Input fields */
-input[type="number"] {
+input[type="text"], input[type="number"] {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-/* Submit button */
-button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #007bff;
+button.btn, a.btn {
+    display: inline-block;
+    background-color: #3498db;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-/* Result page box */
-.result-box {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
-    display: inline-block;
-}
-
-/* Result heading */
-.result-box h2 {
-    color: #333;
-}
-
-/* Result text */
-.result-box p {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-/* Back link */
-.result-box a {
-    display: inline-block;
-    margin-top: 20px;
+    padding: 12px 22px;
+    margin: 8px 5px;
+    border-radius: 6px;
     text-decoration: none;
-    color: #007bff;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.result-box a:hover {
-    color: #0056b3;
+button.btn:hover, a.btn:hover {
+    background-color: #2980b9;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #34495e;
 }

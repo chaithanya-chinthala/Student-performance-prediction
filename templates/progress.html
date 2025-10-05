@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Progress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Progress Tracker - Student {{ student_id }}</h2>
+        <img src="{{ url_for('static', filename='progress_' + student_id + '.png') }}" alt="Progress Chart" style="width:100%; max-width:600px;">
+        <div class="buttons">
+            <a href="{{ url_for('index') }}" class="btn">Predict Another Student</a>
+            <a href="{{ url_for('dashboard') }}" class="btn">View Class Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

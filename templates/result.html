@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Prediction Result</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="result-box">
-        <h2>Predicted Performance</h2>
-        <p><strong>{{ prediction }}</strong></p>
-        <a href="/">Predict Another</a>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <p><strong>Student ID:</strong> {{ student_id }}</p>
+        <p><strong>Predicted Performance:</strong> {{ prediction }}</p>
+
+        <div class="buttons">
+            <a href="{{ url_for('index') }}" class="btn">Predict Another Student</a>
+            <a href="{{ url_for('progress', student_id=student_id) }}" class="btn">View Student Progress</a>
+            <a href="{{ url_for('dashboard') }}" class="btn">View Class Dashboard</a>
+        </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Class Performance Distribution</h2>
+        <img src="{{ url_for('static', filename='performance_chart.png') }}" alt="Class Performance Pie Chart" style="width:100%; max-width:600px;">
+        <div class="buttons">
+            <a href="{{ url_for('index') }}" class="btn">Predict Student</a>
+        </div>
+    </div>
+</body>
+</html>

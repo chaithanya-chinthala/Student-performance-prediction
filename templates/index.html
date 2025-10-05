@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Performance Prediction</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h2>Enter Student Details</h2>
-    <form action="/predict" method="post">
-        <label>Attendance (absence days):</label>
-        <input type="number" name="StudentAbsenceDays" required>
+    <div class="container">
+        <h2>Enter Student Details</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <label>Student ID:</label>
+            <input type="text" name="StudentID" placeholder="Enter Student ID" required><br><br>
 
-        <label>Class Participation (raised hands):</label>
-        <input type="number" name="raisedhands" required>
+            <label>Attendance (absence days):</label>
+            <input type="number" name="StudentAbsenceDays" required><br><br>
 
-        <label>Access to Resources (visits):</label>
-        <input type="number" name="VisITedResources" required>
+            <label>Class Participation (raised hands):</label>
+            <input type="number" name="raisedhands" required><br><br>
 
-        <label>Announcements Viewed:</label>
-        <input type="number" name="AnnouncementsView" required>
+            <label>Access to Resources (visits):</label>
+            <input type="number" name="VisITedResources" required><br><br>
 
-        <label>Discussion / Interaction:</label>
-        <input type="number" name="Discussion" required>
+            <label>Announcements Viewed:</label>
+            <input type="number" name="AnnouncementsView" required><br><br>
 
-        <button type="submit">Predict</button>
-    </form>
+            <label>Discussion / Interaction:</label>
+            <input type="number" name="Discussion" required><br><br>
+
+            <button type="submit" class="btn">Predict Performance</button>
+        </form>
+    </div>
 </body>
 </html>
