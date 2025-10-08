@@ -1,18 +1,24 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f6f8;
+    background-image: url("https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2149464866.jpg?w=2000");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;  
+    background-position: center;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 650px;
+    max-width: 500px;
     margin: 50px auto;
     padding: 30px;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     text-align: center;
+    background-attachment: fixed;
 }
 
 h2 {

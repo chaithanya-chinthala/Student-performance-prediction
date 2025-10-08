@@ -19,6 +19,8 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client["student_performance_db"]
 collection = db["predictions"]
 
+
+
 performance_map = {"L": "Low", "M": "Medium", "H": "High"}
 
 # ------------------ ROUTES ------------------ #
@@ -102,7 +104,6 @@ def dashboard():
         if perf in counts:
             counts[perf] += 1
 
-
     # Pie chart of class performance
     plt.figure(figsize=(5,5))
     plt.pie(counts.values(), labels=counts.keys(), autopct='%1.1f%%', startangle=90,
@@ -117,3 +118,4 @@ def dashboard():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
